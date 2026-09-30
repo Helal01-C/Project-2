@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>My Kitchen | Your daily cooking plan</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="home">
+    <div id="site-header"></div>
+    <main class="dashboard wrap">
+        <section class="dashboard-top">
+            <div>
+                <p class="eyebrow">PLAN IT. COOK IT. ENJOY IT.</p>
+                <h1 id="greeting">Good morning, Chef!</h1>
+                <p id="display-date" class="lead"></p>
+            </div><button id="theme-toggle" class="ghost">🌙 Dark mode</button>
+        </section>
+        <section class="date-nav" aria-label="Select meal-plan date"><button id="previous-day">← Previous day</button>
+            <div><b id="day-name"></b><span id="date-label"></span></div><button id="next-day">Next day →</button>
+        </section>
+        <section class="progress-panel">
+            <div>
+                <div>
+                    <p class="eyebrow">TODAY'S COOKING PROGRESS</p>
+                    <h2 id="meal-progress">0 / 3 meals completed</h2>
+                </div><span id="progress-percent">0%</span>
+            </div>
+            <div class="progress"><i id="meal-progress-bar"></i></div>
+        </section>
+        <section>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR KITCHEN PLAN</p>
+                    <h2>What are you cooking today?</h2>
+                </div><button id="add-meal" class="button">+ Add meal</button>
+            </div>
+            <div id="daily-meals" class="meal-plan-grid"></div>
+        </section>
+        <section class="section quick-links"><a href="recipes.html"><span>🔎</span><b>Find a recipe</b><small>Browse
+                    your meal ideas</small></a><a href="recipes.html"><span>🛒</span><b>Recipe ingredients</b><small>Get
+                    ingredients ready</small></a><a href="weekly.html"><span>📅</span><b>Browse
+                    categories</b><small>Find a dinner idea</small></a></section>
+    </main>
+    <dialog id="meal-dialog"><button class="close" aria-label="Close">×</button>
+        <p class="eyebrow">PERSONALISE YOUR PLAN</p>
+        <h2>Add or replace a meal</h2>
+        <form id="meal-form"><label>Meal type<select name="type">
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                </select></label><label>Meal name<input name="name" required
+                    placeholder="e.g. Vegetable omelette"></label><label>Total time (minutes)<input name="time"
+                    type="number" min="5" value="30"></label><label>Servings<input name="servings" type="number" min="1"
+                    value="2"></label><label>Description<textarea name="description"
+                    placeholder="A short note for your meal plan"></textarea></label><button class="button">Save
+                meal</button></form>
+    </dialog>
+    <div id="site-footer"></div>
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

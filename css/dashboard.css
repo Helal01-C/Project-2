@@ -1,0 +1,219 @@
+.dashboard {
+    padding: 3.5rem 0 5rem
+}
+
+.dashboard-top,
+.date-nav,
+.progress-panel>div,
+.section-heading,
+.meal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem
+}
+
+.date-nav {
+    padding: 1rem 1.3rem;
+    background: #fffdf9;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    margin: 2rem 0
+}
+
+.date-nav button {
+    background: none;
+    color: var(--sage);
+    padding: .5rem
+}
+
+.date-nav div {
+    text-align: center
+}
+
+.date-nav span {
+    display: block;
+    color: var(--muted);
+    font-size: .85rem
+}
+
+.progress-panel {
+    padding: 1.5rem;
+    background: var(--olive);
+    color: #fff;
+    border-radius: 18px;
+    margin-bottom: 3rem
+}
+
+.progress-panel .eyebrow {
+    color: #f5b58e
+}
+
+.progress-panel h2 {
+    font-size: 1.35rem
+}
+
+.progress-panel .progress {
+    background: #ffffff35;
+    margin: 1rem 0 0
+}
+
+.progress-panel .progress i {
+    background: #f5b58e
+}
+
+.meal-plan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+.daily-meal {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #fffdf9;
+    border-radius: 18px;
+    box-shadow: var(--shadow)
+}
+
+.daily-meal.cooked {
+    outline: 2px solid #a8c39c
+}
+
+.daily-meal img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover
+}
+
+.meal-copy {
+    padding: 1.1rem
+}
+
+.meal-copy p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: .9rem
+}
+
+.meal-meta {
+    display: flex;
+    gap: 10px;
+    font-size: .82rem;
+    color: var(--muted);
+    margin: .8rem 0
+}
+
+.meal-actions a {
+    font-weight: bold;
+    color: var(--sage)
+}
+
+.meal-actions button {
+    padding: .55rem .7rem;
+    font-size: .8rem
+}
+
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.quick-links a {
+    background: #f1eee3;
+    border-radius: 15px;
+    padding: 1.1rem
+}
+
+.quick-links span,
+.quick-links b,
+.quick-links small {
+    display: block
+}
+
+.quick-links span {
+    font-size: 1.4rem
+}
+
+.quick-links small {
+    color: var(--muted)
+}
+
+dialog {
+    width: min(480px, calc(100% - 28px));
+    border: 0;
+    border-radius: 20px;
+    padding: 1.7rem;
+    box-shadow: 0 20px 60px #0004
+}
+
+dialog::backdrop {
+    background: #17221a88
+}
+
+dialog label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0
+}
+
+dialog input,
+dialog select,
+dialog textarea {
+    width: 100%;
+    padding: .7rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-top: 3px
+}
+
+dialog textarea {
+    height: 70px
+}
+
+.close {
+    float: right;
+    background: none;
+    color: var(--ink);
+    font-size: 1.5rem;
+    padding: 0
+}
+
+.dark {
+    --cream: #18211c;
+    --paper: #213027;
+    --ink: #f1f5ef;
+    --muted: #b7c2b9;
+    --line: #3a4b40
+}
+
+.dark .date-nav,
+.dark .daily-meal,
+.dark dialog {
+    background: #213027
+}
+
+.dark .quick-links {
+    background: #2b3930
+}
+
+@media(max-width:800px) {
+
+    .meal-plan-grid,
+    .quick-links {
+        grid-template-columns: 1fr
+    }
+
+    .dashboard-top {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .date-nav {
+        padding: .8rem
+    }
+
+    .date-nav button {
+        font-size: .75rem
+    }
+}

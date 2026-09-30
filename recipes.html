@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dinner Recipes | My Kitchen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="recipes">
+    <div id="site-header"></div>
+    <main class="wrap page">
+        <p class="eyebrow">ALL RECIPES</p>
+        <h1>Find your perfect dinner</h1>
+        <p class="lead">Search and filter 30 satisfying recipes for every kind of evening.</p>
+        <section class="filter-panel">
+            <div class="search-row"><label class="sr-only" for="recipe-search">Search recipes</label><input
+                    id="recipe-search" placeholder="Search by recipe, ingredient, cuisine..."><button id="clear-search"
+                    class="ghost">Clear</button></div>
+            <div class="filters"><label>Protein<select id="protein-filter">
+                        <option value="">All proteins</option>
+                        <option>Chicken</option>
+                        <option>Beef</option>
+                        <option>Fish</option>
+                        <option>Drinks</option>
+                        <option>Seafood</option>
+                        <option>Vegetarian</option>
+                    </select></label><label>Cuisine<select id="cuisine-filter">
+                        <option value="">All cuisines</option>
+                    </select></label><label>Difficulty<select id="difficulty-filter">
+                        <option value="">All levels</option>
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select></label><label>Cooking time<select id="time-filter">
+                        <option value="">Any time</option>
+                        <option value="under30">Under 30 min</option>
+                        <option value="30to60">30–60 min</option>
+                        <option value="over60">Over 60 min</option>
+                    </select></label><label>Sort<select id="sort-filter">
+                        <option value="rating">Highest Rated</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="fast">Fastest</option>
+                        <option value="alpha">Alphabetical</option>
+                        <option value="new">Newest</option>
+                    </select></label></div>
+        </section>
+        <p id="result-count" class="result-count"></p>
+        <div id="recipe-list" class="recipe-grid"></div>
+    </main>
+    <div id="site-footer"></div>
+    <script src="js/app.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/filters.js"></script>
+<script src="js/recipe-content.js"></script><script src="js/recipes.js"></script>
+</body>
+
+</html>
