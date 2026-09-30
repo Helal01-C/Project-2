@@ -1,0 +1,13 @@
+{
+  "name": "my-kitchen",
+  "version": "1.0.0",
+  "private": true,
+  "description": "My Kitchen recipe planner API and static web app",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
